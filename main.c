@@ -4,21 +4,21 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(void){
-	int i;
-	int sum = 0;
-	int grade[5];
+	char *pc;
+	int *pi;
+	double *pd;
 	
-	for(i=0; i<5; i++){
-		printf("input grade[%i] = ", i);
-		scanf("%d", &grade[i]);
-	}
+	pc = (char*)10000;
+	pi = (int*)10000;
+	pd = (double*)10000;
 	
-	for(i=0; i<5; i++){
-		printf("grade[%i] = %d\n", i, *(grade+i));
-		sum += *(grade+i);
-	}
+	printf("증가 전 : pc = %d, pi = %d, pd = %d\n", pc,pi,pd);
 	
-	printf("avaerage : %i\n", sum/5);
+	pc++;
+	pi++;
+	pd++;
+	
+	printf("증가 후 : pc = %d, pi = %d, pd = %d\n", pc,pi,pd);
 	
 	return 0;
 }
