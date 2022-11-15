@@ -4,21 +4,16 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(void){
-	char *pc;
-	int *pi;
-	double *pd;
 	
-	pc = (char*)10000;
-	pi = (int*)10000;
-	pd = (double*)10000;
+	int i = 100;
+	int *p = &i;
+	int **q = &p;
 	
-	printf("증가 전 : pc = %d, pi = %d, pd = %d\n", pc,pi,pd);
+	*p = 200;
+	printf("i = %d, *p = %d, **q = %d\n", i, *p, **q);
 	
-	pc++;
-	pi++;
-	pd++;
-	
-	printf("증가 후 : pc = %d, pi = %d, pd = %d\n", pc,pi,pd);
+	**q = 300;
+	printf("i = %d, *p = %d, **q = %d\n", i, *p, **q);
 	
 	return 0;
 }
